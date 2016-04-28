@@ -1,0 +1,12 @@
+md-content(layout-padding='')
+    md-card
+        md-card-title
+            md-card-title-text
+                span.md-headline {{post.title}}
+        md-card-content
+            p {{post.text}}
+md-content(layout='row', layout-align='end center')
+    p Вы уверены, что хотите удалить эту запись?
+    md-button(ng-click='deletePost()').md-raised.md-warn Да
+    | -
+    md-button(ng-click='home()').md-raised.md-primary Нет, спасибо

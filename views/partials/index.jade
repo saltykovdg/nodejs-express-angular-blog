@@ -1,0 +1,13 @@
+md-content(layout-padding='')
+    div Всего постов: {{posts.length}}
+div(ng-repeat='post in posts')
+    md-card
+        md-card-title
+            md-card-title-text
+                span.md-headline {{post.title}}
+        md-card-content
+            p {{post.text}}
+        md-card-actions(layout='row', layout-align='end center')
+            md-button(ng-href='/readPost/{{post.id}}') Открыть
+            md-button(ng-href='/editPost/{{post.id}}') Редактировать
+            md-button(ng-href='/deletePost/{{post.id}}').md-warn Удалить

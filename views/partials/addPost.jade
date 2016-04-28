@@ -1,0 +1,8 @@
+h2 Добавить новый пост
+md-input-container.md-block
+    label Наименование поста
+    input(ng-model='form.title', name='title')
+md-input-container.md-block
+    label Содержание поста
+    textarea(ng-model='form.text', rows='15')
+md-button(ng-click='submitPost()').md-raised.md-primary Добавить
